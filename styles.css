@@ -67,3 +67,20 @@ input[type="date"] {
     appearance: none;
     -webkit-appearance: none;
 }
+
+/* Centering the logo */
+.logo-container {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Add some spacing from the top */
+    margin-bottom: 20px; /* Add spacing between the logo and the form */
+}
+
+/* Resize the logo */
+.logo-container img {
+    max-width: 200px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
