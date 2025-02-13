@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Formulário de Inscrição</h1>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHr00000HNrEA" method="POST">
+    
+        <input type=hidden name="oid" value="00DHr00000HNrEA">
+        <input type=hidden name="retURL" value="http://">
+        
+        <label for="first_name">Primeiro Nome</label><input  required id="first_name"  name="first_name" size="20" type="text" />
+        
+        <label for="last_name">Sobrenome</label><input  required id="last_name"  name="last_name" size="20" type="text" />
+        
+        <label for="00NHr00001UExHq">Data de Nascimento</label><input type="text" required id="00NHr00001UExHq" name="00NHr00001UExHq"/>
+        
+        <label for="00NHr00001UExBi">Local de Nascimento</label><input type="text" required id="00NHr00001UExBi" name="00NHr00001UExBi"/>
+        
+        <label for="phone">Telefone</label><input  required id="phone"  name="phone" size="20" type="text" />
+        
+        <label for="email">Email</label><input  required id="email"  name="email" size="20" type="text" />
+        
+        <label for="00NHr00001UExDo">Ano de Conclusão do Ensino Médio</label><input type="text" required id="00NHr00001UExDo" name="00NHr00001UExDo"/>
+        
+        <label for="00NHr00001UExDj">Instituição de Ensino Anterior</label><input type="text" required id="00NHr00001UExDj" name="00NHr00001UExDj"/>
+
+        <label for="00NHr00001UFUti" class="form-label">Licenciatura</label><input type="text" required id="00NHr00001UFUti" name="00NHr00001UFUti" class="form-control" placeholder="Digite a licenciatura desejada"/>
+        
+        <input type="submit" name="submit">
+    
+    </form>
+    
+</body>
+</html>
+
+<script>
+    $( "#00NHr00001UExHq" ).datepicker({ // Data de Nascimento
+        dateFormat: 'dd/mm/yy', // Sets the date format to dd/mm/yy
+        showButtonPanel: true, changeMonth: true, changeYear: true, yearRange: "1950:2030", showOtherMonths: true, selectOtherMonths: true
+      });
+
+    $( "#00NHr00001UExDo" ).datepicker({ // Ano de Conclusão do Ensino Médio
+        dateFormat: 'dd/mm/yy', // Sets the date format to dd/mm/yy
+        showButtonPanel: true, changeMonth: true, changeYear: true, yearRange: "1950:2030", showOtherMonths: true, selectOtherMonths: true
+      });
+</script>
